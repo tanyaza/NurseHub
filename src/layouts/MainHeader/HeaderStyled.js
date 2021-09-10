@@ -145,6 +145,11 @@ const BannerInfo = styled.div`
 		padding: 10px 30px;
 		cursor: pointer;
 		color: #fff;
+		text-decoration: none;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
 	}
 
 	p {

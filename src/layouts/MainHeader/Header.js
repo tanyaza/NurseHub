@@ -1,16 +1,5 @@
 import React from "react";
-import {
-	HeaderDiv,
-	Nav,
-	NavContainer,
-	NavSearchBox,
-	NavButtonContainer,
-	NavButton,
-	NavButtonMessage,
-	Banner,
-	BannerInfo,
-	BannerImage,
-} from "./HeaderStyled";
+import { HeaderDiv, Nav, NavContainer } from "./HeaderStyled";
 import TopMenuButtonList from "./TopMenuButtonList";
 import { orderCountSelect } from "../../states/orderSlice";
 import { useSelector } from "react-redux";
@@ -27,28 +16,9 @@ const Header = function () {
 					<TopMenuButtonList />
 				</NavContainer>
 				<NavContainer left>
-					<Link
-						to="/login"
-						// onClick={() => handleButtonClick(btn.id)}
-					>
-						ورود / ثبت نام
-					</Link>
+					<Link to="/register">ورود / ثبت نام</Link>
 				</NavContainer>
 			</Nav>
-			<Banner>
-				<BannerInfo>
-					<h3>پرستار میخوای ؟</h3>
-					<p>
-						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-						استفاده از طراحان گرافیک است. مجله در ستون و سطرآنچنان که لازم است و
-						برای شرایط فعلی تکنولوژی
-					</p>
-					<button>بخش خدمات</button>
-				</BannerInfo>
-				<BannerImage>
-					<img src="/images/bannerPic.png" alt="" />
-				</BannerImage>
-			</Banner>
 		</HeaderDiv>
 	);
 };

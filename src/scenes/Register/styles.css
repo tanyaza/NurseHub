@@ -1,0 +1,67 @@
+.register-section {
+	width: 50%;
+	margin: 0 auto;
+	height: 100vh;
+}
+.register-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 3rem;
+}
+.register-title h1 {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 100;
+}
+.title-line {
+	border: 1px solid #565b6b;
+	width: 200px;
+	margin-right: 20px;
+	height: 1px;
+}
+.register-box {
+	background: #4b4f5f;
+	border: 1px solid #4b4f5f;
+	box-sizing: border-box;
+	backdrop-filter: blur(10px);
+	padding: 2rem;
+
+	border-radius: 50px;
+}
+.input-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3rem;
+}
+.register-box label {
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+.register-box input {
+	background: #5d6174;
+	border-radius: 20px;
+	border: none;
+	padding: 10px;
+	outline: none;
+	height: 40px;
+}
+.register-box button {
+	border: none;
+	background: linear-gradient(94.97deg, #ff0000 -130.13%, #c750ff 129.4%);
+	border-radius: 30px;
+	padding: 1rem;
+	color: #ffffff;
+	width: 100%;
+	margin-bottom: 3rem;
+	font-size: 16px;
+	cursor: pointer;
+}
+.register-box p {
+	margin-bottom: 1rem;
+	font-size: 16px;
+	color: #ffffff;
+}
+.register-box p span {
+	color: #c750ff;
+}
