@@ -12,10 +12,11 @@
 }
 .title-line {
 	border: 1px solid #565b6b;
-	width: 80%;
+	width: 70%;
 	margin-right: 30px;
 	height: 1px;
 }
+
 .products-content {
 	display: flex;
 	justify-content: space-between;
@@ -24,7 +25,8 @@
 }
 
 .products-info {
-	width: 30%;
+	width: calc(30% - 1rem);
+	margin-left: 1rem;
 	background: #4b4f5f;
 	border: 1px solid #4b4f5f;
 	box-sizing: border-box;
@@ -38,8 +40,8 @@
 }
 .single-product {
 	border: 1px solid #4b4f5f;
-	border-radius: 50px;
-	padding: 2rem;
+	border-radius: 40px;
+	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	width: calc(25% - 20px);
@@ -49,8 +51,106 @@
 .single-product h4 {
 	font-size: 14px;
 	color: #ffffff;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .single-product h4 {
 	color: rgba(255, 255, 255, 0.5);
+	margin-bottom: 30px;
+}
+.button-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border: 1px solid #56596a;
+	border-radius: 20px;
+	box-sizing: border-box;
+	height: 40px;
+	padding: 1rem 0;
+	transition: 0.3 all linear;
+	color: #ffffff;
+}
+.button-container:hover {
+	background: linear-gradient(94.97deg, #ff0000 -130.13%, #c750ff 129.4%);
+}
+
+.button-container button {
+	background: linear-gradient(94.97deg, #ff0000 -130.13%, #c750ff 129.4%);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	margin-left: 20px;
+	border: none;
+	color: #ffffff;
+	font-size: 1rem;
+}
+.products-info {
+	display: flex;
+	padding: 2rem 1rem;
+	flex-direction: column;
+}
+.second-row {
+	display: flex;
+	justify-content: space-between;
+}
+.info-input-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+}
+.second-row .info-input-container {
+	width: calc(50% - 10px);
+}
+
+.info-input-container label {
+	color: #ffffff;
+	font-size: 16px;
+	margin-bottom: 0.8rem;
+}
+.info-input-container select {
+	padding: 1rem;
+	box-sizing: border-box;
+	height: 100%;
+	background-color: #5d6174;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	color: #ffffff;
+	font-family: "B yekan";
+}
+.products-info button {
+	background: linear-gradient(94.97deg, #ff0000 -130.13%, #c750ff 129.4%);
+	border-radius: 30px;
+	box-sizing: border-box;
+	padding: 1rem;
+	border: transparent;
+	color: #ffffff;
+	margin-top: auto;
+	font-family: "B yekan";
+}
+@media screen and (max-width: 600px) {
+	.title-line {
+		width: 60%;
+	}
+	.products-title h1 {
+		width: 100%;
+	}
+	.products-title {
+		font-size: 16px;
+	}
+	.products-info {
+		display: none;
+	}
+	.products-content {
+		width: 100%;
+	}
+	.products {
+		width: 100%;
+	}
+	.single-product {
+		width: calc(50% - 20px);
+	}
+	.button-container button {
+		margin-left: 10px;
+	}
 }

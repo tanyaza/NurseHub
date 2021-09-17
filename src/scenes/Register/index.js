@@ -14,6 +14,9 @@ const Register = (props) => {
 						<label>شماره تلفن</label>
 						<input></input>
 					</div>
+					{/* <div class="input-text-container">
+						<span>شماره همراه باید با ۰ و ۹ شروع شود</span>
+					</div> */}
 					<button> تائید </button>
 				</form>
 				<p>

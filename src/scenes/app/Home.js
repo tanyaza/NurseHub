@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-	Banner,
-	BannerInfo,
-	BannerImage,
-} from "../../layouts/MainHeader/HeaderStyled";
+import "./styles.css";
 
 const Home = function () {
 	return (
-		<Banner>
-			<BannerInfo>
+		<div class="banner">
+			<div class="bannerImage">
+				<img src="/images/bannerPic.png" alt="" />
+			</div>
+			<div class="bannerInfo">
 				<h3>پرستار میخوای ؟</h3>
 				<p>
 					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
@@ -19,11 +18,8 @@ const Home = function () {
 				<button>
 					<Link to="/products">بخش خدمات</Link>
 				</button>
-			</BannerInfo>
-			<BannerImage>
-				<img src="/images/bannerPic.png" alt="" />
-			</BannerImage>
-		</Banner>
+			</div>
+		</div>
 	);
 };
 

@@ -9,9 +9,9 @@ const Product = function ({ singleProduct }) {
 			</div>
 			<h1>{singleProduct.title}</h1>
 			<h4>{singleProduct.subTitle}</h4>
-			<div>
+			<div class="button-container">
 				<button>+</button>
-				<span>افزودن خدمت</span>
+				<span class="button-text">افزودن خدمت</span>
 			</div>
 		</div>
 	);
