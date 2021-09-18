@@ -134,6 +134,7 @@
 	}
 	.products-title h1 {
 		width: 100%;
+		font-size: 1.1rem;
 	}
 	.products-title {
 		font-size: 16px;
@@ -153,4 +154,41 @@
 	.button-container button {
 		margin-left: 10px;
 	}
+}
+
+.products-modal {
+	position: fixed;
+	padding: 1rem;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(168.1deg, #373d53 -1.02%, #252634 100%);
+	z-index: 300;
+	display: flex;
+	flex-direction: column;
+}
+.hideModal {
+	display: none;
+}
+.showModal {
+	display: flex;
+}
+.products-modal .back {
+	align-self: flex-end;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+.products-modal .back img {
+	margin-right: 15px;
+}
+.single-product {
+	padding: 1rem;
+	border: 1px solid #5d6174;
+	border-radius: 30px;
+	color: #fff;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
