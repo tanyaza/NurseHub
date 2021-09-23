@@ -128,33 +128,6 @@
 	margin-top: auto;
 	font-family: "B yekan";
 }
-@media screen and (max-width: 600px) {
-	.title-line {
-		width: 60%;
-	}
-	.products-title h1 {
-		width: 100%;
-		font-size: 1.1rem;
-	}
-	.products-title {
-		font-size: 16px;
-	}
-	.products-info {
-		display: none;
-	}
-	.products-content {
-		width: 100%;
-	}
-	.products {
-		width: 100%;
-	}
-	.single-product {
-		width: calc(50% - 20px);
-	}
-	.button-container button {
-		margin-left: 10px;
-	}
-}
 
 .products-modal {
 	position: fixed;
@@ -162,7 +135,7 @@
 	width: 100vw;
 	height: 100vh;
 	background: linear-gradient(168.1deg, #373d53 -1.02%, #252634 100%);
-	z-index: 300;
+	z-index: 1;
 	display: flex;
 	flex-direction: column;
 }
@@ -186,9 +159,44 @@
 	border: 1px solid #5d6174;
 	border-radius: 30px;
 	color: #fff;
-	width: 90%;
+	width: calc(25% - 10px);
 	margin: 0 auto;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+	.title-line {
+		width: 60%;
+	}
+	.products-title h1 {
+		width: 100%;
+		font-size: 1.1rem;
+	}
+	.products-title {
+		font-size: 16px;
+	}
+	.products-info {
+		display: none;
+	}
+	.products-content {
+		width: 100%;
+		flex-direction: column;
+	}
+	.products {
+		width: 100%;
+	}
+	.products-modal .single-product {
+		width: 100%;
+	}
+	.single-product {
+		width: calc(50% - 10px);
+	}
+	.single-product h3 {
+		display: flex;
+	}
+
+	.button-container button {
+		margin-left: 10px;
+	}
 }

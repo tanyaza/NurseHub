@@ -34,7 +34,7 @@ const Products = function () {
 				<h1> خدمات پرستاری </h1>
 				<div class="title-line"></div>
 			</div>
-			<div class="products-content">
+			{matches ? (
 				<button
 					onClick={() => {
 						setBack(false);
@@ -42,6 +42,11 @@ const Products = function () {
 				>
 					open{" "}
 				</button>
+			) : (
+				<div></div>
+			)}
+
+			<div class="products-content">
 				<ProductsInfo />
 
 				<div class="products">

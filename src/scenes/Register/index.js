@@ -7,9 +7,7 @@ const Register = (props) => {
 	const [mobile, setMobile] = useState("");
 	const handleRegister = () => {
 		axios
-			.post("https://api.nursehub.ir/Register​/step1", {
-				phoneNumber: mobile,
-			})
+			.post(`https://api.nursehub.ir/Register/step1?phoneNumber=${mobile}`)
 			.then((response) => {
 				console.log(response);
 			});
