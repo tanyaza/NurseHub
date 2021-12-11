@@ -1,0 +1,206 @@
+@font-face {
+	font-family: "Popins";
+	src: url("../../assets/fonts/Poppins-Regular.ttf");
+	font-weight: 300;
+}
+.artists-section {
+	padding-bottom: 100px;
+	box-sizing: border-box;
+	width: 100%;
+}
+.artist-img {
+	height: 600px;
+	max-height: 600px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.artist-img span {
+	font-size: 60px;
+	color: #fff;
+	position: absolute;
+	top: 570px;
+	text-transform: uppercase;
+}
+.artist-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.social-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 7rem 0;
+	direction: ltr;
+}
+.social-icon {
+	border: 1px solid hsl(0, 0%, 30%);
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 20px;
+}
+.social-icon img {
+	width: 25px;
+	max-width: 25px;
+}
+.artist-info {
+	padding: 0 200px;
+	margin-bottom: 6rem;
+}
+.artist-info p {
+	color: #ffffff;
+	direction: ltr;
+	text-align: left;
+	font-size: 16px;
+	line-height: 1.7;
+	letter-spacing: 0.05em;
+	font-family: "Popins";
+}
+.artist-photos {
+	display: flex;
+	padding: 0 200px;
+	margin-bottom: 200px;
+}
+.artist-photos img {
+	width: calc(33% - 20px);
+	margin: 0 10px;
+	max-height: 400px;
+}
+.artist-releases,
+.artist-about {
+	padding: 0 200px;
+	text-align: left;
+	margin: 12rem 0;
+	display: flex;
+	justify-content: space-between;
+	direction: ltr;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+.release-items,
+.about-items {
+	display: flex;
+	width: 70%;
+	direction: ltr;
+}
+.release-item {
+	width: (25% - 50px);
+	margin: 0 25px;
+	display: flex;
+	flex-direction: column;
+}
+.release-item h4 {
+	font-size: 14px;
+	text-align: center;
+}
+.release-item img {
+	width: 100%;
+	max-height: 150px;
+	min-height: 150px;
+	object-fit: cover;
+	margin-bottom: 20px;
+}
+.about-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: left;
+	margin-bottom: 20px;
+	width: calc(33% - 30px);
+	margin: 0 15px;
+}
+.about-item span {
+	color: hsl(0, 0%, 80%);
+	font-family: "Popins";
+}
+.about-item h2 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.artist-latestVideo h2 {
+	font-size: 18px;
+	color: #ffffff;
+	text-align: center;
+}
+@media screen and (max-width: 600px) {
+	.artist-img {
+		height: 400px;
+	}
+	.artist-img span {
+		font-size: 30px;
+		top: 450px;
+	}
+	.social-container {
+		margin-bottom: 5rem;
+	}
+	.social-icon {
+		width: 40px;
+		height: 40px;
+		margin: 0 10px;
+	}
+	.social-icon img {
+		width: 15px;
+		max-width: 15px;
+	}
+	.artist-info {
+		padding: 0 50px;
+	}
+	.artist-releases,
+	.artist-about {
+		flex-direction: column;
+		padding: 0 50px;
+		width: 100%;
+		margin-top: 100px;
+	}
+	.release-items {
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.release-item {
+		width: calc(50% - 20px);
+		margin: 20px 10px;
+	}
+	.release-item img {
+		height: 120px;
+		max-height: 120px;
+		min-height: 120px;
+	}
+	.artist-about {
+		margin: 30px 0 50px;
+	}
+	.artist-about h3 {
+		display: none;
+	}
+	.about-item {
+		margin-bottom: 30px;
+		width: 100%;
+		align-items: center;
+	}
+	.about-item h2 {
+		font-size: 12px;
+	}
+	.about-items {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.artist-info p {
+		font-size: 12px;
+	}
+	.artist-photos {
+		padding: 0 50px;
+		margin-bottom: 0;
+		direction: ltr;
+		overflow: scroll;
+	}
+	.artist-photos img {
+		width: calc(70% - 20px);
+		margin: 0 40px 0 0;
+	}
+}

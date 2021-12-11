@@ -1,24 +1,31 @@
 import React, { useState } from "react";
 import { NavLink } from "./HeaderStyled";
 import { Link } from "react-router-dom";
+import navIcon from "../../assets/icons/navIcon.svg";
 
 const TopMenuButtonList = () => {
 	const btnList = [
 		{
 			id: 1,
-			title: "صفحه اصلی",
+			title: "Home",
 			isDefault: true,
 			route: "/",
 		},
 		{
 			id: 2,
-			title: "درباره ما",
+			title: "Artists",
 			isDefault: false,
-			route: "/about",
+			route: "/artists",
 		},
 		{
 			id: 3,
-			title: "خدمات",
+			title: "Contacts",
+			isDefault: false,
+			route: "/contacts",
+		},
+		{
+			id: 4,
+			title: "About",
 			isDefault: false,
 			route: "/products",
 		},
@@ -34,15 +41,24 @@ const TopMenuButtonList = () => {
 	};
 
 	return (
-		<>
+		<div className="topMenuButtons">
 			{btnList.map((btn) => (
 				<NavLink key={btn.id} active={btn.id === activeButtonId}>
 					<Link to={btn.route} onClick={() => handleButtonClick(btn.id)}>
-						{btn.title}
+						<div style={{ display: "flex" }}>
+							{btn.title}
+							{btn.id === activeButtonId ? (
+								<span>
+									<img src={navIcon} />
+								</span>
+							) : (
+								<></>
+							)}
+						</div>
 					</Link>
 				</NavLink>
 			))}
-		</>
+		</div>
 	);
 };
 

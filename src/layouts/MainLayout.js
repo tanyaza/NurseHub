@@ -2,19 +2,17 @@ import React from "react";
 import Header from "./MainHeader/Header";
 import Footer from "./MainFooter/Footer";
 import { createGlobalStyle } from "styled-components";
-import Toast from "../components/Toast";
 
-import BYekanWOFF2 from "../fonts/BYekan.woff2";
-import BYekanWOFF from "../fonts/BYekan.woff";
-import BYekanTTF from "../fonts/BYekan.ttf";
+import popins from "../assets/fonts/Poppins-Regular.ttf";
 
 const MainLayout = ({ children }) => {
+	const matches = window.matchMedia("(max-width: 500px)").matches;
+
 	return (
 		<>
-			<Header />
+			{matches ? <></> : <Header />}
 			<GlobalStyle />
 			{children}
-			<Toast />
 			<Footer />
 		</>
 	);
@@ -28,16 +26,16 @@ const GlobalStyle = createGlobalStyle`
     direction: rtl;
   }
   @font-face {
-    font-family: "BYekan";
+    font-family: "Popins";
     src: 
-      url(${BYekanWOFF2}) format('woff2'),
-      url(${BYekanWOFF}) format('woff'),
-      url(${BYekanTTF}) format('woff');
+      url(${popins}),
+    font-weight: 300  
   }
   body {
-    font-family: "BYekan";
-    background: linear-gradient(106.57deg, #373D53 0%, #252634 100%);
+    font-family: "Monument";
+    background: #0C0E11;
     height: 100vh;
+    direction: ltr;
   }
 `;
 

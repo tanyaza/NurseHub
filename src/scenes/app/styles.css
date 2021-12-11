@@ -1,88 +1,168 @@
+.home {
+	width: 100%;
+	height: 100vh;
+}
 .banner {
 	width: 100%;
-	padding: 2rem 3rem;
-	margin: 0 auto;
-	direction: ltr;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-family: "B yekan";
+	background: url("../../assets/images/Pattern.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 200px;
+	height: 100vh;
 }
-.bannerInfo {
-	padding: 30px;
-	width: calc(40% - 2rem);
-	align-self: flex-start;
-	direction: rtl;
-	text-align: justify;
-	height: auto;
-	color: #ffff;
-	font-size: 18px;
+.bannerImg {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bannerImg img {
+	max-width: 450px;
+}
+.h-artists-section {
+	padding: 0 5rem;
+	background-color: black;
+}
+.projects-section {
 	display: flex;
 	flex-direction: column;
-	font-family: "B Yekan";
+	padding: 0 5rem;
 }
-.bannerInfo h3 {
-	font-size: 3.5rem;
-	margin-top: 10px;
-	font-weight: 100;
-	margin-bottom: 50px;
-	font-family: "B yekan";
-}
-.bannerInfo button {
-	align-self: right;
-	font-size: 18px;
-	text-align: center;
-	width: 200px;
-	background: linear-gradient(94.97deg, #ff0000 -130.13%, #c750ff 129.4%);
-	border-radius: 30px;
-	border: transparent;
-	padding: 10px 30px;
-	cursor: pointer;
+.projects-section h1 {
 	color: #fff;
-	text-decoration: none;
-	font-family: "B yekan";
+	text-align: left;
+	padding: 5rem 0;
 }
-.bannerInfo a {
-	color: #fff;
-	text-decoration: none;
+.projects-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 50px 0;
 }
-.bannerInfo p {
-	font-size: 18px;
-	font-family: Anjoman;
-	font-weight: 100;
-	margin-bottom: 40px;
-	line-height: 1.6;
-	font-family: "B yekan";
+.single-project {
+	color: hsl(0, 0%, 30%);
+	margin: 10px 5px;
+	width: calc(25% - 10px);
+	font-size: 10px;
 }
-.bannerImage {
-	width: 50%;
-	max-width: 860px;
+.project-img {
+	max-height: 200px;
+	max-width: 500px;
+	overflow: hidden;
+	margin-bottom: 10px;
 }
-.bannerImage img {
+.project-img img {
 	width: 100%;
 	height: 100%;
-	object-fit: contain;
+	object-fit: cover;
 }
-@media screen and (max-width: 480px) {
-	.banner {
+.bottom-img {
+	background-color: #060809;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px;
+}
+.bottom-img img {
+	max-width: 1000px;
+}
+
+/* artist slide */
+.artist-slider {
+	display: flex;
+	justify-content: left;
+	overflow: scroll;
+	padding: 3rem 0;
+}
+.artist-slide {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	width: 80%;
+	margin: 0 auto;
+	background: url("../../assets/images/Artists/artistBack.png");
+	background-position: center;
+	background-size: cover;
+}
+.slide-image {
+	display: flex;
+	position: relative;
+}
+.slide-image img {
+	width: 100%;
+	height: 100%;
+	min-width: 400px;
+}
+.slide-image-text {
+	position: absolute;
+	left: 90%;
+	top: 20%;
+	color: #fff;
+	min-width: 40%;
+	font-family: "Popins";
+}
+.slide-image-text h1 {
+	text-transform: uppercase;
+}
+.slide-image-text p {
+	font-size: 16px;
+	text-align: left;
+}
+.slide-info {
+	padding: 70px 0;
+
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-transform: uppercase;
+}
+.slide-info span {
+	opacity: 0.3;
+	color: #473d3d;
+	font-size: 50px;
+}
+@media screen and (max-width: 600px) {
+	.bottom-img {
+		padding: 20px 0;
+	}
+	.bottom-img img {
+		max-width: 320px;
+	}
+	.slide-image-text {
+		display: none;
+	}
+	.slide-info {
+		display: none;
+	}
+	.h-artists-section {
+		padding: 2rem;
+	}
+	.h-artists-section h1 {
+		color: #fff;
+		text-align: center;
+		font-size: 25px;
+	}
+	.slide-image {
+		margin: 0 auto;
+	}
+	.slide-image img {
+		width: 100%;
+		height: 100%;
+		max-width: 320px;
+		min-width: 320px;
+	}
+	.artist-slide {
+		width: 100%;
+	}
+	.projects-container {
 		flex-direction: column;
-		padding: 1rem;
 	}
-	.bannerInfo button {
-		align-self: center;
-	}
-	.bannerInfo h3 {
-		font-size: 2rem;
-	}
-	.bannerInfo p {
-		font-size: 14px;
-	}
-	.bannerInfo {
+	.single-project {
 		width: 100%;
-		padding: 0;
 	}
-	.bannerImage {
-		padding: 0;
-		width: 100%;
+	.projects-section h1 {
+		padding: 2rem 0;
 	}
 }

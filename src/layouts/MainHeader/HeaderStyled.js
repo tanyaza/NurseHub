@@ -37,24 +37,25 @@ const NavContainer = styled.div`
 
 const NavLink = styled.li`
 	list-style: none;
-	margin-left: 20px;
+	margin: 10px;
 	padding: 10px;
 	border-radius: 20px;
 	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	a {
+		color: hsl(0, 0%, 30%);
+		text-decoration: none;
+		font-size: 14px;
+	}
 	${(props) =>
 		props.active &&
 		css`
-			background: rgba(255, 255, 255, 0.1);
-			backdrop-filter: blur(20px);
+			a {
+				color: #fff;
+			}
 		`}
-	a {
-		color: #ffff;
-		text-decoration: none;
-		font-size: 18px;
-	}
 `;
 
 const NavButtonContainer = styled.div`
