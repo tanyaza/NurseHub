@@ -75,3 +75,13 @@
 	max-width: 20px;
 	object-fit: cover;
 }
+@media screen and (max-width: 600px) {
+	.contacts-section {
+		flex-direction: column-reverse;
+		padding: 200px 1rem 1rem;
+	}
+	.contact-info,
+	.contact-form {
+		width: 100%;
+	}
+}

@@ -1,36 +1,53 @@
 import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import navIcon from "../../assets/icons/navIcon.svg";
 
 function MobileMenu() {
+	const btnList = [
+		{
+			id: 1,
+			title: "Home",
+			isDefault: true,
+			route: "/",
+		},
+		{
+			id: 2,
+			title: "Artists",
+			isDefault: false,
+			route: "/artists",
+		},
+		{
+			id: 3,
+			title: "Contacts",
+			isDefault: false,
+			route: "/contacts",
+		},
+		{
+			id: 4,
+			title: "About",
+			isDefault: false,
+			route: "/about",
+		},
+	];
+	const defaultBtn = btnList[0];
+
 	const [showMenu, setShowMenu] = useState(false);
 	const [menuClass, setMenuClass] = useState("close");
+	const [activeButtonId, setActiveButtonId] = useState(
+		defaultBtn ? defaultBtn.id : null
+	);
+
 	const handleClick = () => {
 		setShowMenu(!showMenu);
 		{
 			showMenu ? setMenuClass("open") : setMenuClass("close");
 		}
 	};
-	const btnList = [
-		{
-			id: 1,
-			title: "صفحه اصلی",
-			isDefault: true,
-			route: "/",
-		},
-		{
-			id: 2,
-			title: "درباره ما",
-			isDefault: false,
-			route: "/about",
-		},
-		{
-			id: 3,
-			title: "خدمات",
-			isDefault: false,
-			route: "/products",
-		},
-	];
+	const handleButtonClick = (id) => {
+		setActiveButtonId(id);
+		handleClick();
+	};
 
 	return (
 		<div class="mobileMenu">
@@ -45,12 +62,7 @@ function MobileMenu() {
 				>
 					<img alt="Logo" src="/images/vector.png" />
 				</span>
-				<span style={{ margin: "0 auto", display: "flex" }}>
-					<img alt="Logo" src="/images/Design studio logo 1.png" />
-				</span>
-				<div class="navContainer navContainerLeft">
-					<Link to="/register">ورود / ثبت نام</Link>
-				</div>
+				<img class="logo" alt="Logo" src="/images/WaveLogo.png" />
 			</div>
 
 			<div className={` menuItems ${menuClass}`}>
@@ -62,8 +74,15 @@ function MobileMenu() {
 				</span>
 				<ul>
 					{btnList.map((btn) => (
-						<Link to={btn.route} onClick={() => handleClick()}>
+						<Link to={btn.route} onClick={() => handleButtonClick(btn.id)}>
 							{btn.title}
+							{btn.id === activeButtonId ? (
+								<span style={{ marginLeft: "10px" }}>
+									<img src={navIcon} />
+								</span>
+							) : (
+								<></>
+							)}
 						</Link>
 					))}
 				</ul>

@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"3d-react-carousal": "^4.0.2",
 		"@bootstrap-styled/provider": "^2.0.3",
 		"@bootstrap-styled/v4": "^3.4.0",
 		"@popperjs/core": "2.9.2",

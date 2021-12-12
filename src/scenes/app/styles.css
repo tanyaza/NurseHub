@@ -1,3 +1,23 @@
+:root .react-3d-carousel .slider-container {
+	left: 25%;
+}
+:root
+	.react-3d-carousel
+	.slider-container
+	.slider-content
+	.slider-single.preactive {
+	opacity: 0.5;
+}
+:root .react-3d-carousel .slider-container .slider-content {
+	width: 80%;
+	left: 60%;
+}
+:root .react-3d-carousel .slider-container .slider-left div {
+	border: none;
+}
+:root .react-3d-carousel .slider-container .slider-right div {
+	border: none;
+}
 .home {
 	width: 100%;
 	height: 100vh;
@@ -69,6 +89,16 @@
 }
 
 /* artist slide */
+.h-artists-section {
+	padding: 3rem 0;
+}
+.h-artists-section h1 {
+	color: #fff;
+	text-align: left;
+	text-transform: capitalize;
+	margin-left: 5rem;
+	margin-bottom: 5rem;
+}
 .artist-slider {
 	display: flex;
 	justify-content: left;
@@ -79,11 +109,13 @@
 	display: flex;
 	justify-content: space-between;
 	text-align: left;
-	width: 80%;
+	width: 100%;
+	padding-right: 20px;
 	margin: 0 auto;
 	background: url("../../assets/images/Artists/artistBack.png");
 	background-position: center;
 	background-size: cover;
+	background-color: #060809;
 }
 .slide-image {
 	display: flex;
@@ -143,6 +175,8 @@
 		color: #fff;
 		text-align: center;
 		font-size: 25px;
+		margin-left: 0;
+		margin-bottom: 2rem;
 	}
 	.slide-image {
 		margin: 0 auto;
@@ -154,7 +188,13 @@
 		min-width: 320px;
 	}
 	.artist-slide {
-		width: 100%;
+		width: 90%;
+		padding: 0;
+		margin: 10px;
+		background-color: transparent;
+	}
+	.artist-slider {
+		direction: ltr;
 	}
 	.projects-container {
 		flex-direction: column;
@@ -164,5 +204,8 @@
 	}
 	.projects-section h1 {
 		padding: 2rem 0;
+	}
+	.bannerImg img {
+		max-width: 350px;
 	}
 }

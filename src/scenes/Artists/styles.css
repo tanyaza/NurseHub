@@ -93,12 +93,32 @@
 	margin: 0 25px;
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
+	transition: 0.3s;
 }
+.release-img-container {
+	position: relative;
+}
+.release-flash {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .release-item h4 {
 	font-size: 14px;
 	text-align: center;
 }
-.release-item img {
+.release-item:hover h4 {
+	color: #fa5570;
+}
+.release-item:hover .release-flash {
+	display: flex;
+}
+
+.release-img {
 	width: 100%;
 	max-height: 150px;
 	min-height: 150px;

@@ -6,14 +6,8 @@ import SwiperCore, { Navigation } from "swiper";
 
 SwiperCore.use([Navigation]);
 
-export default function ArtistSlide() {
+export default function ArtistSlide({ img }) {
 	return (
-		// <Swiper slidesPerView={1} navigation={true}>
-		// 	<SwiperSlide>Slide 1</SwiperSlide>
-		// 	<SwiperSlide>Slide 2</SwiperSlide>
-		// 	<SwiperSlide>Slide 3</SwiperSlide>
-		// 	<SwiperSlide>Slide 4</SwiperSlide>
-		// </Swiper>
 		<div class="artist-slide">
 			<div class="slide-info">
 				<span>mowj</span>
@@ -21,7 +15,7 @@ export default function ArtistSlide() {
 				<span>farda</span>
 			</div>
 			<div class="slide-image">
-				<img src={img1} />
+				<img src={img} />
 				<div class="slide-image-text">
 					<h1>isam</h1>
 					<p>

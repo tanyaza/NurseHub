@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "./MainHeader/Header";
-import Footer from "./MainFooter/Footer";
 import { createGlobalStyle } from "styled-components";
-
+import MobileMenu from "./MainHeader/MobileMenu";
 import popins from "../assets/fonts/Poppins-Regular.ttf";
 
 const MainLayout = ({ children }) => {
@@ -10,10 +9,9 @@ const MainLayout = ({ children }) => {
 
 	return (
 		<>
-			{matches ? <></> : <Header />}
+			{matches ? <MobileMenu /> : <Header />}
 			<GlobalStyle />
 			{children}
-			<Footer />
 		</>
 	);
 };
