@@ -3,6 +3,19 @@
 	src: url("../../assets/fonts/MonumentExtended-Regular.otf");
 	font-weight: 200;
 }
+:root .ant-btn:hover {
+	background-color: transparent;
+	border: none;
+	color: hsl(0, 0%, 30%);
+	border-bottom: 1px solid hsl(0, 0%, 30%);
+}
+:root .ant-notification-notice {
+	text-align: left;
+	font-size: 14px;
+}
+:root .ant-notification-notice-message {
+	direction: ltr;
+}
 .contacts-section {
 	width: 100%;
 	background-image: url("../../assets/images/Pattern.png");
@@ -37,7 +50,8 @@
 	font-size: 18px;
 	font-family: "Monument";
 }
-.form-input input {
+.form-input input,
+.captcha input {
 	outline: none;
 	border: none;
 	border-bottom: 1px solid hsl(0, 0%, 30%);
@@ -75,6 +89,18 @@
 	max-width: 20px;
 	object-fit: cover;
 }
+.captcha {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+}
+.captcha button {
+	border: none;
+}
+.captcha img {
+	object-fit: contain;
+}
 @media screen and (max-width: 600px) {
 	.contacts-section {
 		flex-direction: column-reverse;
@@ -83,5 +109,20 @@
 	.contact-info,
 	.contact-form {
 		width: 100%;
+	}
+	.form-input {
+		align-items: center;
+	}
+	.form-input input,
+	.captcha input {
+		width: 60%;
+		text-align: center;
+		align-self: center;
+	}
+	.contact-info {
+		margin-top: 3rem;
+	}
+	.contact-info-row:nth-child(1) {
+		display: none;
 	}
 }

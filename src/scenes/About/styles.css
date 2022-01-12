@@ -1,0 +1,26 @@
+.about-section {
+	padding: 200px 5rem 2rem;
+	direction: ltr;
+}
+.about-section h1 {
+	color: #fff;
+	font-family: "Monument";
+	font-size: 18px;
+	text-align: left;
+	margin-bottom: 1rem;
+}
+.about-section p {
+	font-family: "Popins";
+	font-size: 18px;
+	text-align: left;
+	color: #fff;
+}
+@media screen and (max-width: 600px) {
+	.about-section {
+		padding: 150px 1rem 1rem;
+	}
+	.about-section p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}

@@ -1,30 +1,53 @@
 import React from "react";
-import img1 from "../../assets/images/Artists/3.jpg";
-import { Swiper, SwiperSlide } from "swiper/react/swiper-react.js";
-import "swiper/swiper.min.css";
-import SwiperCore, { Navigation } from "swiper";
+import { useHistory } from "react-router-dom";
 
-SwiperCore.use([Navigation]);
+export default function ArtistSlide(artist) {
+	const { image, name, description, releases, id } = artist.artist;
+	const matches = window.matchMedia("(max-width: 500px)").matches;
 
-export default function ArtistSlide({ img }) {
+	const history = useHistory();
+
 	return (
 		<div class="artist-slide">
-			<div class="slide-info">
-				<span>mowj</span>
-				<span style={{ textAlign: "right" }}>sargije</span>
-				<span>farda</span>
-			</div>
-			<div class="slide-image">
-				<img src={img} />
-				<div class="slide-image-text">
-					<h1>isam</h1>
-					<p>
-						Sam officially joined Wave Foundation in 2020, where he quickly
-						scored his biggest hit to date with ‘Sargije.’ In addition to his
-						prolific solo career
-					</p>
+			{!matches && (
+				<div class="slide-info">
+					{releases.map((item, i) => {
+						if (i == 1) {
+							return <span style={{ textAlign: "right" }}>{item.name}</span>;
+						}
+						if (i == 0 || i == 2) {
+							return <span>{item.name}</span>;
+						}
+					})}
 				</div>
-			</div>
+			)}
+
+			{matches ? (
+				<div
+					onClick={() => {
+						history.push(`/artists/${id}`);
+						window.scrollTo(0, 0);
+					}}
+					class="slide-image"
+				>
+					<img src={image} />
+					<h4>{name}</h4>
+				</div>
+			) : (
+				<div class="slide-image">
+					<img src={image} />
+					<div class="slide-image-text">
+						<h1
+							onClick={() => {
+								history.push(`/artists/${id}`);
+							}}
+						>
+							{name}
+						</h1>
+						<p>{description}</p>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }

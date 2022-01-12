@@ -1,8 +1,10 @@
-const baseurl = "https://zigzag-api.mahtabad.com/api";
+const baseurl = "https://wavefoundation.co";
 
 export default {
-	hostName: `https://zigzag.mahtabad.com`,
 	artists: `${baseurl}/api/artist/latest`,
 	projects: `${baseurl}/api/artist/release/latest/`,
-	artistInfo: `${baseurl}/api/artist/get/`,
+	artistInfo: `${baseurl}/api/artist/get`,
+	contact: `${baseurl}/api/contact`,
+	video: `${baseurl}/api/home-video`,
+	captcha: `${baseurl}/api/captcha`,
 };

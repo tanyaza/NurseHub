@@ -88,6 +88,14 @@
 	width: 70%;
 	direction: ltr;
 }
+.release-items h2,
+.about-items h2 {
+	color: #fff;
+}
+.release-items h4,
+.about-items h4 {
+	color: #fff;
+}
 .release-item {
 	width: (25% - 50px);
 	margin: 0 25px;

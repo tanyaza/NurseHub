@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import navIcon from "../../assets/icons/navIcon.svg";
+import { useHistory } from "react-router-dom";
+import icon from "../../assets/images/Vector.png";
 
 function MobileMenu() {
+	const history = useHistory();
+	useEffect(() => {
+		const pathname = window.location.pathname;
+		if (pathname.includes("artists")) {
+			setActiveButtonId(2);
+		}
+		if (pathname.includes("contacts")) {
+			setActiveButtonId(3);
+		}
+		if (pathname.includes("about")) {
+			setActiveButtonId(4);
+		}
+	}, [window.location.pathname]);
 	const btnList = [
 		{
 			id: 1,
@@ -15,7 +30,7 @@ function MobileMenu() {
 			id: 2,
 			title: "Artists",
 			isDefault: false,
-			route: "/artists",
+			route: "#artists",
 		},
 		{
 			id: 3,
@@ -60,9 +75,15 @@ function MobileMenu() {
 					}}
 					onClick={handleClick}
 				>
-					<img alt="Logo" src="/images/vector.png" />
+					<img alt="Logo" src={icon} />
 				</span>
-				<img class="logo" alt="Logo" src="/images/WaveLogo.png" />
+				<a
+					onClick={() => {
+						history.push(`/`);
+					}}
+				>
+					<img class="logo" alt="Logo" src="/images/WaveLogo.png" />
+				</a>{" "}
 			</div>
 
 			<div className={` menuItems ${menuClass}`}>
@@ -74,16 +95,37 @@ function MobileMenu() {
 				</span>
 				<ul>
 					{btnList.map((btn) => (
-						<Link to={btn.route} onClick={() => handleButtonClick(btn.id)}>
-							{btn.title}
-							{btn.id === activeButtonId ? (
-								<span style={{ marginLeft: "10px" }}>
-									<img src={navIcon} />
-								</span>
+						<div>
+							{btn.id == 2 ? (
+								<a
+									href="#artists"
+									onClick={() => {
+										history.push("/#artists");
+										handleButtonClick(btn.id);
+									}}
+								>
+									{btn.title}
+									{btn.id === activeButtonId ? (
+										<span style={{ marginLeft: "10px" }}>
+											<img src={navIcon} />
+										</span>
+									) : (
+										<></>
+									)}
+								</a>
 							) : (
-								<></>
+								<Link to={btn.route} onClick={() => handleButtonClick(btn.id)}>
+									{btn.title}
+									{btn.id === activeButtonId ? (
+										<span style={{ marginLeft: "10px" }}>
+											<img src={navIcon} />
+										</span>
+									) : (
+										<></>
+									)}
+								</Link>
 							)}
-						</Link>
+						</div>
 					))}
 				</ul>
 			</div>
