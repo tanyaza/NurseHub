@@ -1,1 +1,1 @@
-# NurseHub
+# Wave foundation
